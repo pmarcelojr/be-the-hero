@@ -1,0 +1,37 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/backend"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+- package-ecosystem: npm
+  directory: "/frontend"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: "@testing-library/user-event"
+    versions:
+    - 12.7.0
+    - 12.7.4
+    - 12.8.2
+    - 13.0.0
+    - 13.0.1
+    - 13.0.10
+    - 13.0.11
+    - 13.0.12
+    - 13.0.13
+    - 13.0.14
+    - 13.0.15
+    - 13.0.16
+    - 13.0.3
+    - 13.0.5
+    - 13.0.6
+    - 13.0.8
+    - 13.0.9
+    - 13.1.0
+    - 13.1.1
+  - dependency-name: "@testing-library/react"
+    versions:
+    - 11.2.4
